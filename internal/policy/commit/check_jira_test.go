@@ -126,6 +126,18 @@ func TestCommit_ValidateJiraCheck(t *testing.T) {
 			},
 			want: want{errorCount: 0},
 		},
+		{
+			name: "Valid commit without type nor square brackets",
+			fields: fields{
+				Header: &HeaderChecks{
+					Jira: &JiraChecks{
+						Keys: []string{"JIRA", "PROJ"},
+					},
+				},
+				msg: "PROJ-1234 valid commit",
+			},
+			want: want{errorCount: 0},
+		},
 	}
 	for _, tt := range tests {
 		tt := tt
