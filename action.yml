@@ -9,4 +9,4 @@ inputs:
     required: true
 runs:
   using: "docker"
-  image: "docker://morgangeek/conform:latest"
+  image: "docker://morganwattiez/conform:latest"
